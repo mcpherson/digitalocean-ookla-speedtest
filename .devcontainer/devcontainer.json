@@ -1,0 +1,19 @@
+{
+    "name": "digitalocean",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true
+            },
+            "extensions": [
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "mounts": [
+        "source=${env:HOME}${env:USERPROFILE}/.vscode-bash-hists/digitalocean,target=/home/marlon/.bash_history,type=bind"
+    ],
+    "remoteUser": "marlon"
+}
